@@ -1,1 +1,162 @@
 
+/* BASE COLORS
+#95E8D3
+RGB: 149–232–211
+RGB [%]: 58.4–91–82.7
+
+#62D3B7
+RGB: 98–211–183
+RGB [%]: 38.4–82.7–71.8
+
+#3EBF9E
+RGB: 62–191–158
+RGB [%]: 24.3–74.9–62
+
+#20AB89
+RGB: 32–171–137
+RGB [%]: 12.5–67.1–53.7
+
+#049470
+RGB: 4–148–112
+RGB [%]: 1.6–58–43.9
+
+*/
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    margin: 20px;
+}
+
+.header {
+    background-image: linear-gradient(to right bottom, rgba(62, 191, 158, 0.6), rgba(4, 148, 112, 0.6)), url('../img/hero.jpg');
+    height: 95vh;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 2000;
+}
+
+.logo {
+    height: 100px;
+    opacity: .5;
+    color: white;
+}
+
+.navigation{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    text-align: center;
+    /*letter-spacing: 2px;*/
+}
+
+.app-navigation {
+    list-style: none;
+}
+
+.app-navigation li {
+    display: inline-block;
+    animation: moveInBottom .5s ease-out .3s;
+    animation-fill-mode: backwards;
+}
+
+.app-navigation li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 35px;
+    letter-spacing: 3px;
+    
+}
+
+.app-navigation li a:hover {
+    padding: 15px 35px;
+    background-color: rgba(62, 193, 250, 0.13);
+    letter-spacing: 3px;
+    border-radius: 100px;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.primary-heading {
+    text-transform: uppercase;
+    color: white;
+}
+
+.primary-heading-main {
+    display: block;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.primary-heading-sub {
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 17.9px;
+    text-align: justify;
+}
